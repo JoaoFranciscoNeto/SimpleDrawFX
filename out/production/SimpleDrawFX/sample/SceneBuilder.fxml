@@ -38,7 +38,7 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
             <Canvas fx:id="MainCanvas" height="450.0" width="500.0" />
-            <Canvas fx:id="EffectCanvas" height="450.0" width="500.0" onMousePressed="#onMousePressedListener" onMouseDragged="#onMouseDraggedListener"/>
+            <Canvas fx:id="EffectCanvas" height="450.0" width="500.0" onMousePressed="#onMousePressedListener" onMouseDragged="#onMouseDraggedListener" onMouseReleased="#onMouseReleaseListener"/>
          </children>
       </AnchorPane>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #eee;" GridPane.rowIndex="1">

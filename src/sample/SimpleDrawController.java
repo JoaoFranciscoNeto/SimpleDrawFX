@@ -73,9 +73,33 @@ public class SimpleDrawController implements Initializable {
         }
     }
 
+    @FXML
+    private void onMouseReleaseListener(MouseEvent e) {
+        this.lastX = e.getX();
+        this.lastY = e.getY();
+        switch (toolSelected) {
+            case RECT:
+                drawRectMaster();
+                break;
+            case CIRC:
+                break;
+            case LINE:
+                break;
+        }
+    }
+
+    //Save rect in master canvas
+    private void drawRectMaster() {
+        double wh = lastX - startX;
+        double hg = lastY - startY;
+
+        gcE.clearRect(0, 0, EffectCanvas.getWidth(), EffectCanvas.getHeight());
+        gcM.setStroke(ColorPick.getValue());
+        gcM.strokeRect(startX, startY, wh, hg );
+    }
+
 
     // Drawing Effects
-
     private void drawRectEffect() {
         double wh = lastX - startX;
         double hg = lastY - startY;
